@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+  web:
+    build: ./web #this is where the docker file is
+    ports:
+      - "5000:5000"
+    links:
+      - db
+  db:
+    build: ./db
